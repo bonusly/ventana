@@ -21,7 +21,20 @@
   "homepage": "https://github.com/bonusly/ventana#readme",
   "devDependencies": {
     "express": "^4.13.4",
-    "jade": "^1.11.0",
+    "mocha": "^2.4.5",
     "pug": "^0.1.0"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.5.0",
+    "body-parser": "^1.15.0",
+    "es6": "0.0.7",
+    "express": "^4.13.4",
+    "jsx": "^0.9.89",
+    "pug": "^0.1.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "request": "^2.71.0",
+    "socket.io": "^1.4.5",
+    "webpack": "^1.12.15"
   }
 }
