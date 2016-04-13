@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/bonusly/ventana/issues"
   },
-  "homepage": "https://github.com/bonusly/ventana#readme"
+  "homepage": "https://github.com/bonusly/ventana#readme",
+  "devDependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "pug": "^0.1.0"
+  }
 }
