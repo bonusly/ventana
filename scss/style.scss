@@ -1,0 +1,20 @@
+/////////////
+//  Style  //
+/////////////
+
+// Imports
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic);
+@import 'bourbon';
+
+// Variables
+$main-font: 'Open Sans', sans-serif;
+$black: #333;
+$white: #fff;
+$gray: #aaa;
+$light-gray: #f7f7f7;
+$brand-color: #1ec659;
+
+// Partials
+@import 'normalize';
+@import 'base';
+@import 'bonus';

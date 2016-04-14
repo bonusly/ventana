@@ -1,23 +1,56 @@
 doctype html
 //if lt IE 7
-    html.no-js.ie6.oldie(lang='en')
+  html.no-js.ie6.oldie(lang='en')
 //if IE 7
-    html.no-js.ie7.oldie(lang='en')
+  html.no-js.ie7.oldie(lang='en')
 //if IE 8
-    html.no-js.ie8.oldie(lang='en')
+  html.no-js.ie8.oldie(lang='en')
 //[if gt IE 8]><!
 html.no-js(lang='en')
-    //<![end if]
-    head
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-        title=title
-        meta(name="description", content=description)
-        meta(name="author", content=author)
-        meta(name="viewport", content='width=device-width, initial-scale=1')
-        script(src="https://cdn.socket.io/socket.io-1.3.5.js")
-          
-    body
-      
-      footer
-                
+  //<![end if]
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title=title
+    meta(name='description', content=description)
+    meta(name='author', content=author)
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    script(src='https://cdn.socket.io/socket.io-1.3.5.js')
+    link(rel='stylesheet', href='style.css')
+
+  body.highlights
+    .bonus-container
+      .bonus.does-zoom-in
+
+        .bonus-header
+          .bonus-total-value +5
+
+          .bonus-recipients
+            a.bonus-recipient(href='CHANGEME')
+              img.bonus-recipient-avatar(src='CHANGEME', alt='CHANGEME')
+
+          .bonus-info
+            a.bonus-timestamp(href='CHANGEME') 2h ago
+
+        .bonus-body
+          <a class="bonus-author" href="CHANGEME">Hulk:</a> <span class="bonus-value">+5</span> <a class="bonus-name" href="CHANGEME">@spiderman</a> for dat nice backflip-roundhouse kick earlier today. I didn't know you had such moves, dude <a class="bonus-hashtag" href="CHANGEME">#no-messing-around</a> <a class="bonus-hashtag" href="CHANGEME">#justice-rules</a>
+
+    .stats-container
+      .stats
+        .stat
+          h2.stat-title Today's Bonuses
+          .stat-number 14
+
+        .stat
+          h2.stat-title Recent Receivers
+          .stat-recipients
+            a.stat-recipient(href='CHANGEME')
+              img.stat-recipient-avatar(src='CHANGEME', alt='CHANGEME')
+            a.stat-recipient(href='CHANGEME')
+              img.stat-recipient-avatar(src='CHANGEME', alt='CHANGEME')
+            a.stat-recipient(href='CHANGEME')
+              img.stat-recipient-avatar(src='CHANGEME', alt='CHANGEME')
+            a.stat-recipient(href='CHANGEME')
+              img.stat-recipient-avatar(src='CHANGEME', alt='CHANGEME')
+            a.stat-recipient(href='CHANGEME')
+              img.stat-recipient-avatar(src='CHANGEME', alt='CHANGEME')

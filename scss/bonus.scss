@@ -1,0 +1,178 @@
+//////////////////
+//  Highlights  //
+//////////////////
+
+.highlights {
+	@include display(flex);
+	@include flex-direction(column);
+	height: 100%;
+	width: 100%;
+	background-color: $brand-color;
+	font-size: 27px;
+
+  @include min-width(1000px) {
+    font-size: 36px;
+  }
+
+  @include min-width(1400px) {
+    font-size: 45px;
+  }
+
+  @include min-width(1600px) {
+    font-size: 54px;    
+  }
+}
+
+/////////////////////////
+//  Highlighted Bonus  //
+/////////////////////////
+
+.bonus-container {
+	@include flex(2);
+	@include display(flex);
+	padding: 0.5em;
+}
+
+.bonus {
+	max-width: 1400px;
+	margin: auto;
+  padding: 1.5em;
+  color: $black;
+  background-color: $white;
+  border-radius: 0.25em;
+  box-shadow: 0 0.05em 0.15em rgba($black, 0.1);
+  overflow: hidden;
+}
+
+.bonus-header {
+  @include clearfix;
+}
+
+.bonus-total-value {
+  float: left;
+  height: 2.25em;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-color: $brand-color;
+  font-weight: bold;
+  color: $white;
+  padding: 0 0.75em;
+  line-height: 2.25em;
+}
+
+.bonus-recipients {
+  float: left;
+}
+
+.bonus-recipient {
+  float: left;
+  display: block;
+  margin-right: 0.5em;
+
+  &:last-child { margin-right: 0; }
+}
+
+.bonus-recipient-avatar {
+  display: block;
+  width: 2.25em;
+  height: 2.25em;
+  border-radius: 0.25em;
+}
+
+.bonus-info {
+  float: right;
+  font-size: 0.875em;
+  line-height: 2.25em;
+  color: $gray;
+  margin-right: 0.5em;
+}
+
+.bonus-body {
+  margin: 1em 0 0 0;
+  line-height: 1.3em;
+}
+
+.bonus-author {
+  font-weight: bold;
+  &:hover { text-decoration: underline; }
+}
+
+.bonus-value {
+  color: $brand-color;
+  font-weight: bold;
+  border: 0.1em solid $brand-color;
+  border-radius: 0.25em;
+  padding: 0 0.325em;
+}
+
+.bonus-name {
+  font-weight: bold;
+  color: $brand-color;
+  &:hover { text-decoration: underline; }
+}
+
+.bonus-hashtag {
+  color: $gray;
+  &:hover { text-decoration: underline; }
+}
+
+/////////////////////////
+//  Highlighted Stats  //
+/////////////////////////
+
+.stats-container {
+	@include display(flex);
+	box-shadow: 0 -0.05em 0.15em rgba($black, 0.1);
+	padding: 1em;
+	background-color: $white;
+	color: $black;
+}
+
+.stats {
+	@include display(flex);
+	@include justify-content(center);
+	margin: auto;
+}
+
+.stat {
+	padding: 1em 2em;
+	border-right: 0.1em solid rgba($gray, 0.2);
+	line-height: 1;
+
+	&:last-child { border-right: none; }
+}
+
+.stat-title {
+	margin-bottom: 0.5em;
+	font-size: 0.75em;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $gray;
+	letter-spacing: -0.01em;
+}
+
+.stat-number {
+	font-weight: 400;
+	font-size: 2.5em;
+}
+
+.stat-recipients {
+  @include clearfix;
+  max-width: 600px;
+}
+
+.stat-recipient {
+  float: left;
+  display: block;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+
+  &:last-child { margin-right: 0; }
+}
+
+.stat-recipient-avatar {
+  display: block;
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 0.25em;
+}

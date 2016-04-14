@@ -4,6 +4,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const request = require('request');
+const sass = require('node-sass-middleware');
+const bourbon = require('node-bourbon');
 
 // Run server to listen on port 8888.
 const server = app.listen(8888, () => {
@@ -17,6 +19,19 @@ app.set('views', __dirname+'/views');
 app.set('view engine', 'pug');
 
 const io = require('socket.io')(server);
+
+// SCSS compiling
+app.use(
+  sass({
+    src: __dirname + '/scss',
+    dest: __dirname + 'public',
+    debug: true,
+    includePaths: bourbon.includePaths,
+    outputStyle: 'compressed'
+  })
+);
+
+app.use(express.static( __dirname + 'public'));
 
 // Set socket.io listeners.
 io.on('connection', (socket) => {
@@ -40,8 +55,9 @@ app.get('/:guid', function(request, response){
 function get_data(guid){
   request('https://bonus.ly/api/v1/bonuses?access_token='+guid, function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      console.log(body);
-      return body;
+      console.log('success');
+      // console.log(body);
+      // return body;
     }
   })
 }
